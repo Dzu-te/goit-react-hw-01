@@ -1,24 +1,24 @@
 import { useState } from "react";
-import reactLogo from "../assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import Product from "./Product.jsx";
+import userData from "../userData.json";
+import Profile from "./profile/Profile";
+import friends from "../friends.json";
+import { FriendList } from "./FriendList/FriendList";
+import transactions from "../transactions.json";
+import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
 
 export default function App() {
   return (
     <div>
-      <h1>Products</h1>
-
-      <Product
-        name="Tacos With Lime"
-        // imgUrl="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?dpr=2&h=480&w=640"
-        price={10.99}
+      <Profile
+        username={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        avatar={userData.avatar}
+        stats={userData.stats}
       />
-      <Product
-        name="Fries and Burger"
-        imgUrl="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?dpr=2&h=480&w=640"
-        price={14.29}
-      />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 }
