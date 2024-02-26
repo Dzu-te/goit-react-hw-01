@@ -1,7 +1,7 @@
 import { TransactionItem } from "./TransactionItem";
 import styles from "./TransactionHistory.module.css";
 
-export const TransactionHistory = ({ items }) => {
+export const TransactionHistory = ({ items = [] }) => {
   return (
     <table>
       <thead>
