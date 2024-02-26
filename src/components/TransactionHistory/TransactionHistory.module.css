@@ -3,8 +3,8 @@ table {
   width: 400px;
 }
 
-tr,
-td,
-th {
+.styles.theadTr,
+.tbodyTd,
+.theadTh {
   border: 2px solid #111;
 }
